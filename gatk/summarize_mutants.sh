@@ -1,0 +1,1 @@
+awk -F'\t' '{count[$5]++} END {for (v in count) print "n =", count[v], v}' sf_final_metadata_with_del.tsv 

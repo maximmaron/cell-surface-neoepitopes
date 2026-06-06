@@ -1,0 +1,118 @@
+================================================
+1. PER-SAMPLE GTF COMPLETION
+================================================
+  Samples in manifest : 1166
+  GTFs produced       : 1166
+  Empty GTFs          : 0
+  All samples complete
+
+================================================
+2. MERGED GTF SANITY
+================================================
+  Transcript counts:
+    merged_raw   : 991305
+    merged_final : 808165
+
+  Chromosomes in merged_final (should all be chr*):
+chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrM
+chrX
+chrY
+
+  Strand distribution (should have both + and -):
+3654180 +
+3695224 -
+  26444 .
+
+================================================
+3. NOVEL TRANSCRIPT CONTENT
+================================================
+  GENCODE transcripts (ENST*) : 503063
+  Novel transcripts (MSTRG*)  : 305102
+  Expected novel range        : 20,000 - 60,000
+  WARNING: Novel count high — low-coverage sample noise may be inflating the GTF
+
+================================================
+4. GFFCOMPARE CLASS CODE SUMMARY
+================================================
+StringTie merge summary
+==================================================
+
+Total transcripts (canonical) : 988096
+Kept in final GTF             : 808165
+Excluded                      : 179931
+
+GFFCompare class code distribution:
+--------------------------------------------------
+  =    502944  Exact GENCODE match
+  c       119  Contained in reference exon
+  e         2  Single exon partial overlap
+  i     63807  Intronic (potential retained intron)  ← ZRSR2 targets
+  j    158522  Novel junction, known gene  ← primary rMATS targets
+  k    145209  Fully intronic (background transcription) [EXCLUDED]
+  m     23225  Retained intron — all sites match reference
+  n     42322  Retained intron — not all sites match reference
+  o     10017  Generic overlap
+  p      1546  Polymerase run-on (potential read-through neoepitopes)
+  s        97  Pre-mRNA fragment artifact [EXCLUDED]
+  u     16350  Intergenic/unknown
+  x     23555  Antisense overlap [EXCLUDED]
+  y       381  Contains a reference within its intron
+
+================================================
+5. KNOWN GENE SPOT CHECK
+================================================
+  ACTB: 265 features  [OK]
+  SF3B1: 295 features  [OK]
+  SRSF2: 59 features  [OK]
+  U2AF1: 158 features  [OK]
+  ZRSR2: 126 features  [OK]
+  IL17RC: 2440 features  [OK]
+  SLC3A2: 852 features  [OK]
+  TFR2: 1547 features  [OK]
+
+================================================
+6. STRANDEDNESS CALL DISTRIBUTION ACROSS SAMPLES
+================================================
+        5 forward
+      773 reverse
+      388 unstranded
+
+  Unstranded fraction: 33.2%
+
+================================================
+7. NOVEL MULTI-EXON TRANSCRIPTS (rMATS targets)
+================================================
+  class j (novel junction, known gene)     : 158522  ← primary rMATS targets
+  class i (intronic / retained intron)     : 63807  ← ZRSR2 targets
+  class u (intergenic — mostly excluded)   : 16350
+
+================================================
+8. GTF READY FOR RMATS
+================================================
+  merged_final.gtf exists and is non-empty
+  Path to use as --gtf in rMATS:
+    /data1/abdelwao/maxim/splicing_pipeline/stringtie/merge/merged_final.gtf
+
+Done — Sat Apr 11 15:21:42 EDT 2026

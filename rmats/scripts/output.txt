@@ -1,0 +1,167 @@
+================================================
+1. PER-SAMPLE GTF COMPLETION
+================================================
+  Samples in manifest : 1166
+  GTFs produced       : 1166
+  Empty GTFs          : 0
+  All samples complete
+
+================================================
+2. MERGED GTF SANITY
+================================================
+  Transcript counts:
+    merged_raw   : 991305
+    merged_final : 978840
+
+  Chromosomes in merged_final (should all be chr*):
+chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrM
+chrX
+chrY
+GL000008.2
+GL000009.2
+GL000194.1
+GL000195.1
+GL000205.2
+GL000213.1
+GL000214.1
+GL000216.2
+GL000218.1
+GL000219.1
+GL000220.1
+GL000221.1
+GL000224.1
+GL000225.1
+KI270438.1
+KI270442.1
+KI270706.1
+KI270707.1
+KI270710.1
+KI270711.1
+KI270712.1
+KI270713.1
+KI270714.1
+KI270717.1
+KI270718.1
+KI270719.1
+KI270720.1
+KI270721.1
+KI270722.1
+KI270726.1
+KI270727.1
+KI270728.1
+KI270731.1
+KI270733.1
+KI270734.1
+KI270741.1
+KI270742.1
+KI270743.1
+KI270744.1
+KI270745.1
+KI270746.1
+KI270748.1
+KI270749.1
+KI270750.1
+KI270751.1
+KI270752.1
+KI270753.1
+KI270754.1
+KI270755.1
+
+  Strand distribution (should have both + and -):
+4746738 +
+4853583 -
+  26472 .
+
+================================================
+3. NOVEL TRANSCRIPT CONTENT
+================================================
+  GENCODE transcripts (ENST*) : 509650
+  Novel transcripts (MSTRG*)  : 469190
+  Expected novel range        : 20,000 - 60,000
+  WARNING: Novel count high — low-coverage sample noise may be inflating the GTF
+
+================================================
+4. GFFCOMPARE CLASS CODE SUMMARY
+================================================
+StringTie merge summary
+==================================================
+
+Total transcripts (merged)  : 991305
+Kept in final GTF           : 978840
+Excluded (single-exon noise): 12465
+
+GFFCompare class code distribution:
+----------------------------------------
+  =    505219  Exact GENCODE match
+  c       119  Contained in reference exon
+  e         2  Single exon partial overlap
+  i     63863  Intronic (potential retained intron)
+  j    158675  Multi-exon junction match (novel isoform of known gene)
+  k    145401  Contained within reference intron (same strand)
+  m     23285  Retained intron — all donor/acceptor sites match reference
+  n     42359  Retained intron — not all sites match reference
+  o     10038  Generic overlap
+  p      1548  Polymerase run-on (kept — potential read-through neoepitopes)
+  s        97  Possible pre-mRNA fragment [EXCLUDED]
+  u     16739  Intergenic/unknown
+  x     23574  Opposite strand overlap
+  y       386  Contains a reference within its intron
+
+================================================
+5. KNOWN GENE SPOT CHECK
+================================================
+  ACTB: 265 features  [OK]
+  SF3B1: 295 features  [OK]
+  SRSF2: 59 features  [OK]
+  U2AF1: 158 features  [OK]
+  ZRSR2: 126 features  [OK]
+  IL17RC: 2440 features  [OK]
+  SLC3A2: 852 features  [OK]
+  TFR2: 1547 features  [OK]
+
+================================================
+6. STRANDEDNESS CALL DISTRIBUTION ACROSS SAMPLES
+================================================
+        5 forward
+      773 reverse
+      388 unstranded
+
+  Unstranded fraction: 33.2%
+
+================================================
+7. NOVEL MULTI-EXON TRANSCRIPTS (rMATS targets)
+================================================
+  class j (novel junction, known gene)     : 158675  ← primary rMATS targets
+  class i (intronic / retained intron)     : 63863  ← ZRSR2 targets
+  class u (intergenic — mostly excluded)   : 16739
+
+================================================
+8. GTF READY FOR RMATS
+================================================
+  merged_final.gtf exists and is non-empty
+  Path to use as --gtf in rMATS:
+    /data1/abdelwao/maxim/splicing_pipeline/stringtie/merge/merged_final.gtf
+
+Done — Fri Apr 10 18:39:23 EDT 2026

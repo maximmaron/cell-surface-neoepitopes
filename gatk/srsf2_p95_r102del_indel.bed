@@ -1,0 +1,7 @@
+# SRSF2 P95_R102del indel scan window — hg38, 0-based half-open
+# Deletion spans chr17:76736855-76736879 (24 bp, 8 codons, in-frame)
+# Window padded +/-50 bp to catch reads whose alignment starts/ends near boundary
+# Pass to calculate_vaf.py via --indel-bed; requires --gtf for full sensitivity
+# (STAR may encode this deletion as a novel CIGAR N rather than D)
+chr17	76736805	76736929	SRSF2_P95_R102del	-
+

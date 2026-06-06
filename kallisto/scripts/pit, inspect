@@ -1,0 +1,27 @@
+Help on module spit.run_spit in spit:
+
+NNAAMMEE
+    spit.run_spit
+
+FFUUNNCCTTIIOONNSS
+    cchheecckk__ffoorr__ccoovvaarriiaatteess(label_file)
+
+    hhaannddllee__cclluusstteerriinngg(args)
+
+    hhaannddllee__ddttuu(args)
+
+    hhaannddllee__ffiilltteerr(args)
+
+    hhaannddllee__ppaarraamm__ffiitt(args)
+
+    hhaannddllee__sshhaarreedd__aarrggss(parser)
+
+    mmaaiinn(argv=None)
+
+    mmaakkee__oouuttppuutt__ddiirr(target_dir)
+
+    sseett__nnoo__cclluusstteerr__nnssmmaallll(args, param_bool)
+
+FFIILLEE
+    /home/maronm/.conda/envs/kallisto/lib/python3.12/site-packages/spit/run_spit.py
+

@@ -1,0 +1,55 @@
+# Large data directories
+RFdiffusion/
+junctions/
+qc/
+old/
+ggsashimi/
+
+# Large data within subdirs — keep only their scripts/
+rmats/*
+!rmats/scripts/
+
+stringtie/*
+!stringtie/scripts/
+
+kallisto/*
+!kallisto/scripts/
+
+leafcutter/*
+!leafcutter/scripts/
+
+# GATK — exclude data files
+gatk/*.bam
+gatk/*.bai
+gatk/*.vcf
+gatk/*.vcf.gz
+gatk/*.tbi
+gatk/*.sam
+gatk/*.tsv
+gatk/del_calls/
+gatk/output
+
+# Large file types anywhere (safety net)
+*.bam
+*.bai
+*.fastq.gz
+*.sam
+*.vcf.gz
+*.bcf
+*.rds
+*.RData
+*.bigwig
+*.bw
+*.gz
+*.zip
+*.err
+*.out
+*.log
+
+# Logs
+logs/
+
+# Python/Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
